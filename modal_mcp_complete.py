@@ -740,4 +740,4 @@ def modal_health():
 def modal_get_tools():
     """Get available MCP tools"""
     loop = asyncio.new_event_loop()
-    asyncio.set_event_
+    asyncio.set_event_loop
