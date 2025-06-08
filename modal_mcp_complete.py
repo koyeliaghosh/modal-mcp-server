@@ -741,3 +741,10 @@ def modal_get_tools():
     """Get available MCP tools"""
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
+    tools = loop.run_until_complete(handle_list_tools())  # ADD THIS LINE
+    loop.close()                                          # ADD THIS LINE
+    return {                                              # ADD THIS BLOCK
+        "tools": [tool.model_dump() for tool in tools],
+        "total_tools": len(tools),
+        "server": "modal-mcp-stock-analysis"
+    }
