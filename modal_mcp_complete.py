@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Modal MCP Server - Fresh Start - NO ASYNC COMPLICATIONS
+Modal MCP Server - Fresh Start - NO ASYNC COMPLICATIONs
 """
 
 import json
