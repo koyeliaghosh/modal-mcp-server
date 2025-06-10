@@ -61,46 +61,41 @@ This MCP server provides stock analysis tools through a RESTful API, demonstrati
 
 ### Base URL
 ```
-https://your-username--mcp-stock-analysis-server-web-app.modal.run
+https://koyeliaghoshroy1--mcp-stock-analysis-server-web-app.modal.run
+
 ```
 
 ### Available Endpoints:
 
 #### **GET /** - Server Information
 ```bash
-curl https://your-modal-url/
+curl https://koyeliaghoshroy1--mcp-stock-analysis-server-web-app.modal.run/
 ```
 
 #### **GET /health** - Health Check
 ```bash
-curl https://your-modal-url/health
+curl https://koyeliaghoshroy1--mcp-stock-analysis-server-web-app.modal.run/health
 ```
 
 #### **GET /tools** - MCP Tools Discovery
 ```bash
-curl https://your-modal-url/tools
+curl https://koyeliaghoshroy1--mcp-stock-analysis-server-web-app.modal.run/tools
 ```
 
 #### **POST /call** - Execute MCP Tool
 ```bash
-curl -X POST https://your-modal-url/call \
+curl -X POST https://koyeliaghoshroy1--mcp-stock-analysis-server-web-app.modal.run/call \
   -H "Content-Type: application/json" \
-  -d '{
-    "name": "get_stock_price",
-    "arguments": {"symbol": "AAPL"}
-  }'
+  -d '{"name": "TOOL_NAME", "arguments": {"key": "value"}}'
 ```
 
 ## 🛠️ Usage Examples
 
 ### Stock Price Lookup
 ```bash
-curl -X POST https://your-modal-url/call \
+curl -X POST https://koyeliaghoshroy1--mcp-stock-analysis-server-web-app.modal.run/call \
   -H "Content-Type: application/json" \
-  -d '{
-    "name": "get_stock_price",
-    "arguments": {"symbol": "TSLA"}
-  }'
+  -d '{"name": "get_stock_price", "arguments": {"symbol": "AAPL"}}'
 ```
 
 **Response:**
@@ -121,11 +116,9 @@ curl -X POST https://your-modal-url/call \
 
 ### Comprehensive Analysis
 ```bash
-curl -X POST https://your-modal-url/call \
+curl -X POST https://koyeliaghoshroy1--mcp-stock-analysis-server-web-app.modal.run/call \
   -H "Content-Type: application/json" \
-  -d '{
-    "name": "analyze_stock_comprehensive", 
-    "arguments": {"symbol": "AAPL"}
+  -d '{"name": "analyze_stock_comprehensive", "arguments": {"symbol": "AAPL"}
   }'
 ```
 
@@ -150,7 +143,7 @@ curl -X POST https://your-modal-url/call \
 
 ### Smart Ticker Search
 ```bash
-curl -X POST https://your-modal-url/call \
+curl -X POST https://koyeliaghoshroy1--mcp-stock-analysis-server-web-app.modal.run/call \
   -H "Content-Type: application/json" \
   -d '{
     "name": "smart_ticker_search",
@@ -245,7 +238,7 @@ modal logs <app-id>
 ### Health Checks
 Monitor server health via the `/health` endpoint:
 ```bash
-curl https://your-modal-url/health
+curl https://koyeliaghoshroy1--mcp-stock-analysis-server-web-app.modal.run/health
 ```
 
 ### Error Handling
@@ -313,7 +306,7 @@ MIT License - see LICENSE file for details.
 
 ## 🔗 Related Links
 
-- **Frontend Interface**: [Gradio MCP Client](https://huggingface.co/spaces/koyelia/mcp-stock-analysis-hackathon)
+- **Frontend Interface**: [Gradio MCP Client] (https://huggingface.co/spaces/Agents-MCP-Hackathon/mcp-stock-analysis-hackathon)
 - **Modal Platform**: [modal.com](https://modal.com)
 - **MCP Specification**: [Model Context Protocol](https://spec.modelcontextprotocol.io/)
 
